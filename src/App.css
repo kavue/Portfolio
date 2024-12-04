@@ -1,49 +1,171 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+:root {
+  font-family: 'Roboto', sans-serif; /* Set the default font family */
+  --primary-color: #535bf2; /* Define a primary color variable */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Space out the h1 and the navigation */
+  align-items: center; /* Center the content vertically */
+  padding: 1rem 2rem; /* Add padding around the header */
+  background-color: var(--primary-color); /* Choose a color for the header */
+  color: white; /* Text color for the header */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem; /* Adds spacing between each navigation item */
+}
+
+.header nav a {
+  color: white; /* Text color for navigation links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header nav a:hover {
+  text-decoration: underline; /* Adds underline effect on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center; /* Center align text */
   }
-  to {
-    transform: rotate(360deg);
+
+  .header nav {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 0.5rem; /* Reduce the space between navigation items */
+  }
+
+  .header h1 {
+    font-size: 1.5rem; /* Smaller header text on mobile */
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
+/* About Me */
 .avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+  display: block;  /* Ensures the image is displayed as a block element */
+  margin-right: 20px; /* Optional: adds space between the image and text */
+  width: 250px;  /* Set a fixed width for the avatar */
+  height: 250px;  /* Set a fixed height for the avatar */
+  border-radius: 50%; /* Optional: makes the avatar round */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  padding: 1rem;
 }
+
+.about-me {
+  display: flex;  /* Use flexbox for aligning content */
+  flex-direction: column;  /* Align items in a vertical stack (avatar on top) */
+  align-items: flex-start;  /* Left-align the content */
+  text-align: left;  /* Left-align the text */
+}
+
+.about-me h1 {
+  font-size: rem; /* Adjust the size of the "About Me" title */
+  color: black; /* Optional: change text color */
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.about-me p {
+  font-size: 1rem; /* Adjust the size of the paragraph text */
+  color: black; /* Optional: change text color */
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  padding: 20px;
+}
+
+.footer a {
+  margin: 0 15px; /* Adds spacing between the links */
+  font-size: 1.5rem; /* Adjust icon size */
+  color: #4A4A4A; /* Optional: set link color */
+  text-decoration: none; /* Removes underline from the links */
+}
+
+.footer a:hover {
+  color:var(--primary-color) /* Optional: change color on hover */
+}
+
+/* Contact page */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  align-self: center;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #535bf2;
+  box-shadow: 0 0 3px rgba(83, 91, 242, 0.5);
+}
+
+.contact button {
+  padding: 1rem;
+  background-color: #535bf2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+  width: 100%; 
+}
+
+.contact button:hover {
+  background-color: #3d47b1;
+}
+
+.contact p {
+  color: red;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem;
+  }
+}
+
