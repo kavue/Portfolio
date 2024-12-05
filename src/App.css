@@ -186,9 +186,10 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 20rem); /* 3 items per row */
-  gap: 60px; /* Space between items */
+  grid-template-columns: repeat(3, 0.2fr); /* 3 items per row by default */
+  gap: 40px; /* Space between items */
   justify-content: center;
+  padding: 60px;
 }
 
 .portfolio a {
@@ -261,6 +262,20 @@
   color: var(--primary-color); /* Change color on hover */
 }
 
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 00.2fr); /* 2 items per row */
+  }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 item per row (stacked) */
+  }
+}
+
+/* Resume */
 .resume {
   display: flex;  /* Use flexbox for aligning content */
   flex-direction: column;  /* Align items in a vertical stack */
