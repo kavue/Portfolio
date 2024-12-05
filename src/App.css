@@ -173,20 +173,22 @@
 }
 
 /* Portfolio */
-.portfolio h1 {
-  font-size: 2rem; /* Adjust the size of the "About Me" title */
-  color: black; /* Change text color */
-  margin-bottom: 20px; /* Adds space below the heading */
-  margin-left: 20px;
+.portfolio-title {
+  font-size: 2rem; /* Adjust as needed */
+  text-align: left; /* Center the title if you want */
+  margin-bottom: 20px; /* Adds space below the title */
+  margin-left: 3rem; /* Adds space to the left of the title */
 }
 
 .portfolio {
+  padding: 20px;
+}
+
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 20rem); /* 3 items per row */
   gap: 60px; /* Space between items */
-  padding: 20px;
   justify-content: center;
-  padding: 20px;
 }
 
 .portfolio a {
@@ -257,4 +259,18 @@
 
 .live-app:hover {
   color: var(--primary-color); /* Change color on hover */
+}
+
+.resume {
+  display: flex;  /* Use flexbox for aligning content */
+  flex-direction: column;  /* Align items in a vertical stack */
+  align-items: flex-start;  /* Left-align the content */
+  text-align: left;  /* Left-align the text */
+  margin-left: 3rem;
+}
+
+.resume h1 {
+  font-size: 2rem; /* Adjust the size of the "Resume" title */
+  color: black; /* Change text color */
+  margin-bottom: 20px; /* Adds space below the heading */
 }
