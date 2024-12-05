@@ -2,6 +2,7 @@
 
 Welcome to my personal portfolio! This project showcases my journey as a beginner coder with a passion for learning and growing in the tech world. Feel free to explore my work, resume, and contact me!
 
+
 ## Features
 * About Me: Learn more about my journey, skills, and experiences.
 * Portfolio: Showcase of my projects and work.
@@ -39,7 +40,6 @@ To run the project locally, follow the steps below:
 |   |   |-- developer.jpg        # Developer image for About Me section
 |   |-- App.jsx                  # Main entry point for the app
 |   |-- App.css                  # Global styles
-|   |-- index.css                # Styles specific to index page
 |-- /public
 |   |-- index.html               # HTML template for the app
 |-- package.json                 # Project dependencies and scripts
