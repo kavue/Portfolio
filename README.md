@@ -2,6 +2,7 @@
 
 Welcome to my personal portfolio! This project showcases my journey as a beginner coder with a passion for learning and growing in the tech world. Feel free to explore my work, resume, and contact me!
 
+**[View my portfolio here](https://portfolio-120424.netlify.app/)**
 
 ## Features
 * About Me: Learn more about my journey, skills, and experiences.
