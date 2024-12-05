@@ -3,15 +3,17 @@ import EmployeeTracker from '../assets/EmployeeTracker.jpg';
 import VehicleBuilder from '../assets/VehicleBuilder.jpg';
 import WeatherDashboard from '../assets/WeatherDashboard.jpg';
 import CosmicQuest from '../assets/CosmicQuest.png';
+import CandidateSearch from '../assets/CandidateSearch.jpg';
 import { FaGithub } from 'react-icons/fa';
 
 const Portfolio = () => {
     const projects = [
-      { title: 'Auto README', image: AutoREADME, live: '#', repo: '#' },
-      { title: 'Employee Tracker', image: EmployeeTracker, live: '#', repo: '#' },
-      { title: 'Vehicle Builder', image: VehicleBuilder, live: '#', repo: '#' },
-      { title: 'Weather Dashboard', image: WeatherDashboard, live: '#', repo: '#' },
-      { title: 'Cosmic Quest', image: CosmicQuest, live: '#', repo: '#' },
+      { title: 'Auto README', image: AutoREADME, repo: 'https://github.com/kavue/AutoREADME' },
+      { title: 'Employee Tracker', image: EmployeeTracker, repo: 'https://github.com/kavue/EmployeeTracker' },
+      { title: 'Vehicle Builder', image: VehicleBuilder, repo: 'https://github.com/kavue/VehicleBuilder' },
+      { title: 'Weather Dashboard', image: WeatherDashboard, live: 'https://weatherdashboard-ywp8.onrender.com/', repo: 'https://github.com/kavue/WeatherDashboard' },
+      { title: 'Cosmic Quest', image: CosmicQuest, live: 'https://xfigueroa.github.io/CosmicQuest-Project/', repo: ' https://github.com/xfigueroa/CosmicQuest-Project' },
+      { title: 'Candidate Search', image: CandidateSearch, repo: 'https://github.com/' },
     ];
   
     return (
@@ -25,11 +27,11 @@ const Portfolio = () => {
                 <a href={project.repo} target="_blank" rel="noopener noreferrer" className="github-icon">
                   <FaGithub size={30} />
                 </a>
+                <a href={project.live} target="_blank" rel="noopener noreferrer" className="live-app">
+                  Live App
+                </a>
               </div>
             </div>
-            <a href={project.live} target="_blank" rel="noopener noreferrer">
-              Live App
-            </a>
           </div>
         ))}
       </section>
