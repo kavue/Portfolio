@@ -2,16 +2,16 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => (
   <nav className="nav">
-    <NavLink to="/" end activeClassName="active">
+    <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
       About Me
     </NavLink>
-    <NavLink to="/portfolio" activeClassName="active">
+    <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active' : '')}>
       Portfolio
     </NavLink>
-    <NavLink to="/contact" activeClassName="active">
+    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
       Contact
     </NavLink>
-    <NavLink to="/resume" activeClassName="active">
+    <NavLink to="/resume" className={({ isActive }) => (isActive ? 'active' : '')}>
       Resume
     </NavLink>
   </nav>

@@ -39,6 +39,19 @@
   text-decoration: underline; /* Adds underline effect on hover */
 }
 
+/* Navigation active link */
+.nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin: 0 15px;
+}
+
+.nav a.active {
+  color: yellow; /* highlight color */
+  font-weight: bold;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .header {
